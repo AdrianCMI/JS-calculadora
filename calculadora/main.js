@@ -4,9 +4,14 @@ var operacion = '';
 var operando2 = '';
 var resultado_final = '';
 var simbolo = '';
+var operando_final1 = '';
+var operando_final2 = '';
 
 
-//funcion que enseña la operacion
+
+
+
+//funcion que enseña los numeros
 var pulsar = function(num){;
     if(operacion == '') {;
             operando1 = operando1 + num;
@@ -18,57 +23,69 @@ var pulsar = function(num){;
 
 };
 
+
+
+
+
+// funciones de cada simbolo
 var btnsumar = function(num) {;
-    if(num == 'sumar') {;
+    if(num == '+') {;
         document.getElementById('pantalla').innerHTML = '';
         operacion = num;
-        simbolo = 'sumar';
+        simbolo = '+';
     };
 }
 
 var btnrestar = function(num) {;
-    if(num == 'restar') {;
+    if(num == '-') {;
         document.getElementById('pantalla').innerHTML = '';
         operacion = num;
-        simbolo = 'restar';
+        simbolo = '-';
     }
 };
 
 var btnmultiplicar = function(num) {;
-    if(num == 'multiplicar') {
+    if(num == '*') {
         document.getElementById('pantalla').innerHTML = '';
         operacion = num;
-        simbolo = 'multiplicar';
+        simbolo = '*';
     }
 }
 
 var btndividir = function(num) {;
-    if(num == 'dividir') {
+    if(num == '/') {
         document.getElementById('pantalla').innerHTML = '';
         operacion = num;
-        simbolo = 'dividir';
+        simbolo = '/';
     }
 }
+
 
 
 
 
 //igual
 var igualar = function(resultado_final){;
-    if(simbolo == 'sumar') {
+    if(simbolo == '+') {
     var resultado_final = sumar(operando1, operando2);
     document.getElementById('pantalla').innerHTML = resultado_final;
-    } else if(simbolo == 'restar') {;
+    } else if(simbolo == '-') {;
         var resultado_final = restar(operando1, operando2);
         document.getElementById('pantalla').innerHTML = resultado_final;
-    } else if(simbolo == 'multiplicar') {;
+    } else if(simbolo == '*') {;
         var resultado_final = multiplicar(operando1, operando2);
         document.getElementById('pantalla').innerHTML = resultado_final;
-    } else if(simbolo == 'dividir') {;
+    } else if(simbolo == '/') {;
         var resultado_final = dividir(operando1, operando2);
         document.getElementById('pantalla').innerHTML = resultado_final;
     }
+    resultado_historial = operando1 + ' ' + operacion + ' ' + operando2 + ' ' + '=' + ' ' + resultado_final;
+    document.getElementById('historial').innerHTML = resultado_historial;
 }
+
+
+
+
 
 //funciones de los simbolos de operacion
 var sumar = function(operando1, operando2) {;

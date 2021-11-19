@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Calculadora</title>
+    <title>Prueba 2</title>
 </head>
 <body>
     <center>
+<div>
     <label id="pantalla" class="pantalla"></label>
     <br>
+</div>
 <div class="numeros">
     <button onclick="pulsar('7');">7</button>
     <button onclick="pulsar('8');">8</button>
@@ -24,12 +26,16 @@
     <button onclick="pulsar('0');">0</button>
 </div>
 <div class="operaciones">
-    <button onclick="btnsumar('sumar');">+</button>
-    <button onclick="btnrestar('restar');">-</button>
-    <button onclick="btnmultiplicar('multiplicar');">*</button>
-    <button onclick="btndividir('dividir');">/</button>
+    <button onclick="btnsumar('+');">+</button>
+    <button onclick="btnrestar('-');">-</button>
+    <button onclick="btnmultiplicar('*');">*</button>
+    <button onclick="btndividir('/');">/</button>
     <button onclick="igualar('resultado');">=</button>
     <button onclick="reset();">C</button>
+</div>
+<div>
+    <br>
+    <label id="historial" class="historial">HISTORIAL:</label>
 </div>
     </center>
 
