@@ -1,0 +1,32 @@
+body {
+
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+}
+
+.pantalla {
+
+    height: 100px;
+    width: auto;
+}
+
+button {
+
+    height: 30px;
+    width: 30px;
+}
+
+.numeros {
+
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.operaciones {
+
+    position: relative;
+    height: auto;
+    width: 100%;
+}
