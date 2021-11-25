@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        var fila = Number(prompt('¿Cuántas filas quieres en la tabla?'))
+        var columna = Number(prompt('¿Cuántas columnas quieres en la tabla?'))
+
+        function genera_tabla() {
+
+            var body = document.getElementsByTagName("body")[0];
+
+
+            var tabla   = document.createElement("table");
+            var tblBody = document.createElement("tbody");
+
+
+            for (var a = 0; a < fila; a++) {
+
+                var hilera = document.createElement("tr");
+
+                for (var b = 0; b < columna; b++) {
+
+                    var celda = document.createElement("td");
+                    var textoCelda = document.createTextNode("fila "+a+", columna "+b);
+                    celda.appendChild(textoCelda);
+                    hilera.appendChild(celda);
+                }
+
+
+                tblBody.appendChild(hilera);
+            }
+
+
+            tabla.appendChild(tblBody);
+
+            body.appendChild(tabla);
+
+            tabla.setAttribute("border", "2");
+        }
+    </script>
+
+</head>
+<body>
+
+    <input type="button" value="Generar tabla" onclick="genera_tabla()">
+
+</body>
+</html>

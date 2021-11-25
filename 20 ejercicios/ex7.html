@@ -6,24 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 7</title>
     <style>
-        .btnh1 {
-            visibility: hidden;
+        
+        .visible {
+
+            opacity: 100%;
         }
-        .btnh2 {
-            visibility: hidden;
+
+
+        .invisible2 {
+
+            opacity: 0%;
         }
+
+        .invisible1 {
+
+            opacity: 0%;
+        }
+
+
     </style>
     <script>
+
+
         var press = function(){;
-            document.getElementById(btn1).className='btnh1';
-        };
-        var press = function(){;
-            document.getElementById(btn2).className='btnh2';
+            document.getElementById('boton1').className= 'invisible1';
+            document.getElementById('btn2').className= 'visible';
         };
     </script>
 </head>
 <body>
-    <button id="btn1" onclick="press()">Botón</button>
-    <button id="btn2" onclick="press()">Botón</button>
+    <button id="boton1" onclick="press(boton1)">Botón 1</button>
+    <button id="btn2" class="invisible2">Botón 2</button>
 </body>
-</html>
+</html> 
